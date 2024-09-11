@@ -1,17 +1,9 @@
-tc = int(input())
-
-
-def check(str):
-    for i in range(0, len(str)):
-        
-        if int(str[i]) != 4 and int(str[i]) != 7: return "NO"
+t = int(input())
+while t > 0:
+    t -= 1
     
-    return "YES"
-
-
-
-while tc > 0:
-    tc -= 1
-    str = input()
-    print(check(str))
-
+    for c in input():
+        if c!='4' and c!='7':
+            print("NO")
+            break
+    else: print("YES")

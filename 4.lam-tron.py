@@ -1,17 +1,30 @@
 import math
+
 tc = int(input())
 
-def roundNumber(number, string):
+def hd_rounded(number, string):
 
-    string_len = len(string)
-    factor = pow(10, string_len - 1)
-    roundedNumber = round(number/factor)
-    if(int(string[string_len -1]) == 5):  roundedNumber = math.ceil(number/factor)
+    cnt = len(string) - 1
+    l = 1
 
-    return roundedNumber * factor
+    while l <= cnt:
 
+        dv_number = pow(10, l)
+        
+        rm_number = number % dv_number
+
+        number -= rm_number
+
+        if rm_number >= dv_number/2:
+            number += dv_number
+
+        l+=1
+
+    return number
+
+# Vòng lặp xử lý các test case
 while tc > 0:
     tc -= 1
-    string = input()
-    number = int(string)
-    print(roundNumber(number, string))
+    str_num = input() 
+    number = int(str_num) 
+    print(hd_rounded(number, str_num)) 
