@@ -14,13 +14,12 @@ def handle_count(number):
 def checkPrime(number):
 
     if number < 2: 
-        return "NO"
-    
+        return "NO"  
+      
     for i in range(2, number):
-
         if number % i == 0:
             return "NO"
-        
+    
     return "YES"
 
 
