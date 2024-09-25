@@ -1,14 +1,10 @@
+a, k, n = map(int, input().split()) 
 
-a, k , n = map(int, input().split())
+if (k > n ): print(-1) 
+else: x = k - a % k 
 
-flag  = False
+if a + x > n: print(-1) 
 
-for b in range(1,n +1):
-   if( ( a +  b) <= n and ( a +  b) % k == 0): 
-     flag = True
-     print(b, end=" ")
-    
+for i in range(x, n - a + 1, k): 
+  print(i, end = " ")
 print()
-if not flag:
-    print(-1)
-
