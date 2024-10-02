@@ -8,7 +8,6 @@ def gcd_counter(number):
 
 
 def checked_counter(number): 
-   
     checked_number = number
     x_cnt  = gcd_counter(number)
    
